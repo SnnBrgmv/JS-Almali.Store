@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+header {
+    width: 100%;
+}
+
+header div.container {
+    width: 90%;
+    height: 20vh;
+    /* background-color: lightgreen; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header div.container-menu {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3px;
+    display: none;
+}
+
+header div.container-menu div.container-menu-icon {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+header div.container-menu h2 {
+    width: 75%;
+    font-size: .85rem;
+    color: #333;
+}
+
+header div.container-menu div.container-menu-icon>div {
+    width: 70%;
+    height: .5vh;
+    background-color: #333;
+}
+
+header div.container div.container-img {
+    width: 17%;
+}
+
+header div.container div.container-img:hover {
+    cursor: pointer;
+}
+
+header div.container div.container-img img {
+    width: 100%;
+    object-fit: contain;
+}
+
+header div.container div.container-form {
+    width: 83%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+header div.container div.container-form form {
+    width: 80%;
+    display: flex;
+}
+
+header div.container div.container-form form input {
+    width: 95%;
+    color: grey;
+    font-size: .85rem;
+    padding: 12px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+input[type="search"] {
+    caret-color: grey;
+}
+
+::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+}
+
+header div.container div.container-form form button {
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ea1b25;
+    border: 1px solid #ea1b25;
+    outline: none;
+}
+
+header div.container div.container-form form button:hover {
+    box-shadow: 0 0 200px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+header div.container div.container-form .container-form-icon {
+    width: 12%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+header div.container div.container-form .container-form-icon i {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+
+div.menu-list {
+    width: 30%;
+    height: 100vh;
+    background-color: aliceblue;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    display: none;
+}
+
+div.menu-list ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.menu-list ul:hover {
+    cursor: pointer;
+}
+
+div.menu-list ul li {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 1s all linear;
+    border: .2px solid rgba(0, 0, 0, 0.1);
+}
+
+div.menu-list ul li:hover a {
+    color: red;
+}
+
+div.menu-list ul li a {
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: rgb(43, 43, 43);
+    text-decoration: none;
+    font-size: .75rem;
+    letter-spacing: .1px;
+
+}
+
+div.menu-list ul li hr {
+    border: .2px solid rgba(0, 0, 0, 0.1);
+    height: 7vh;
+}
+
+div.menu-list ul li span {
+    width: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+div.menu-list ul li span i {
+    font-size: .9rem;
+    color: #777777;
+}
+
+
+
+/* Responsive CSS */
+@media only screen and (max-width: 1024px) {
+    header div.container {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header div.container-menu {
+        display: flex;
+    }
+
+    header div.container-menu div.container-menu-icon>div {
+        width: 30%;
+        height: .6vh;
+    }
+
+    header div.container-menu h2 {
+        width: 45%;
+        font-size: .75rem;
+    }
+
+    header div.container div.container-form {
+        width: 5%;
+    }
+
+    header div.container div.container-form form {
+        display: none;
+    }
+
+    header div.container div.container-form .container-form-icon i:first-child {
+        display: none;
+    }
+}
