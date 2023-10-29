@@ -4,10 +4,14 @@ let body = document.querySelector('body')
 
 menuBtn.addEventListener('click', (e) => {
 
-    menuList.style.display = "block";
+    setTimeout(() => {
+        menuList.style.display = "block";
+    }, 250);
     e.stopPropagation();
 })
 
 body.addEventListener('click', () => {
-    menuList.style.display = "none";
+    setTimeout(() => {
+        menuList.style.display = "none";
+    }, 250);
 })

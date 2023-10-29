@@ -112,17 +112,65 @@ header div.container div.container-form .container-form-icon {
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 20px;
+    column-gap: 8px;
 }
 
-header div.container div.container-form .container-form-icon i {
-    font-size: 1.2rem;
-    color: #333;
+header div.container div.container-form .container-form-icon:hover {
+    cursor: pointer;
 }
 
+header div.container div.container-form .container-form-icon div.container-form-icon-compare {
+    width: 30%;
+    position: relative;
+}
+
+header div.container div.container-form .container-form-icon div.container-form-icon-compare::after {
+    content: "0";
+    width: 10px;
+    height: 10px;
+    padding: 2px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    right: -4px;
+    top: -1px;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+}
+
+header div.container div.container-form .container-form-icon div.container-form-icon-bag {
+    width: 30%;
+    position: relative;
+}
+
+header div.container div.container-form .container-form-icon div.container-form-icon-bag::after {
+    content: "0";
+    width: 10px;
+    height: 10px;
+    padding: 2px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -6px;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+}
+
+header div.container div.container-form .container-form-icon>div img {
+    width: 100%;
+    object-fit: contain;
+}
+
+header div.container div.container-form .container-form-icon hr {
+    height: 3.5vh;
+    width: 1px;
+}
 
 div.menu-list {
-    width: 30%;
+    width: 250px;
     height: 100vh;
     background-color: aliceblue;
     position: absolute;
@@ -189,7 +237,7 @@ div.menu-list ul li span i {
 /* Responsive CSS */
 @media only screen and (max-width: 1024px) {
     header div.container {
-        width: 95%;
+        width: 90%;
         margin: auto;
         display: flex;
         align-items: center;
@@ -198,27 +246,43 @@ div.menu-list ul li span i {
 
     header div.container-menu {
         display: flex;
+        width: 110px;
+        justify-content: start;
     }
 
     header div.container-menu div.container-menu-icon>div {
-        width: 30%;
-        height: .6vh;
+        width: 80%;
+        height: .48vh;
     }
 
     header div.container-menu h2 {
-        width: 45%;
+        width: 40%;
         font-size: .75rem;
     }
 
     header div.container div.container-form {
-        width: 5%;
+        width: 15%;
     }
 
     header div.container div.container-form form {
         display: none;
     }
 
-    header div.container div.container-form .container-form-icon i:first-child {
+    header div.container div.container-form .container-form-icon {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    header div.container div.container-form .container-form-icon .container-form-icon-compare {
         display: none;
+    }
+
+    header div.container div.container-form .container-form-icon hr {
+        display: none;
+    }
+
+    header div.container div.container-form .container-form-icon .container-form-icon-bag {
+        width: 20%;
     }
 }
